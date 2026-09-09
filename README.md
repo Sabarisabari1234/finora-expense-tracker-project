@@ -8,6 +8,8 @@ https://finora-expense-tracker-project.vercel.app
 
 ## Demo Account
 
+Due to email verification requirements in the deployed environment, a pre-verified demo account is provided for easy access to the application.
+
 Use the following credentials to explore the application without creating an account:
 
 **Email:** demo@finora.com  

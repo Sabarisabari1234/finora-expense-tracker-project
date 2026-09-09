@@ -1,16 +1,80 @@
-# React + Vite
+# Finora – Personal Finance Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Finora is a full-stack personal finance management application that helps users track income, expenses, budgets, and spending analytics through a secure and responsive web interface.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://finora-expense-tracker-project.vercel.app
 
-## React Compiler
+## Demo Account
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Use the following credentials to explore the application without creating an account:
 
-## Expanding the ESLint configuration
+**Email:** demo@finora.com  
+**Password:** Demo@12345
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## GitHub
+
+https://github.com/Sabarisabari1234/finora-expense-tracker-project
+
+## Features
+
+- User registration and secure login
+- JWT-based authentication and protected routes
+- Email verification
+- Password reset through email
+- Add, edit, delete, and track expenses
+- Income management
+- Category-based monthly budgets
+- Spending analytics and financial charts
+- User-specific financial data
+- Responsive interface
+- Dark and light theme support
+
+## Tech Stack
+
+### Frontend
+- React.js
+- Vite
+- Tailwind CSS
+- shadcn/ui
+
+### Backend
+- Node.js
+- Express.js
+- RESTful APIs
+- Mongoose
+
+### Database
+- MongoDB
+- MongoDB Atlas
+
+### Authentication & Security
+- JWT
+- bcrypt
+- Email verification
+- Password reset
+- Protected API routes
+
+### Email
+- Resend
+
+### Deployment
+- Vercel – Frontend
+- Render – Backend
+- MongoDB Atlas – Database
+
+## Project Structure
+
+```text
+finora/
+├── backend/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   └── server.js
+├── src/
+│   ├── components/
+│   ├── pages/
+│   └── App.jsx
+└── package.json

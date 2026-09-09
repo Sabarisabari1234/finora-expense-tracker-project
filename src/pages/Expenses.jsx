@@ -23,7 +23,7 @@ function Expenses({ expenses, setExpenses, handleAddExpense, theme, setToken, se
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        `http://localhost:5000/api/expenses/${updatedExpense.id}`,
+        `https://finora-backend-ogsi.onrender.com/api/expenses/${updatedExpense.id}`,
         {
           method: "PUT",
           headers: {
@@ -64,7 +64,7 @@ function Expenses({ expenses, setExpenses, handleAddExpense, theme, setToken, se
   async function handleDeleteExpense(id) {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`http://localhost:5000/api/expenses/${id}`, {
+      const response = await fetch(`https://finora-backend-ogsi.onrender.com/api/expenses/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

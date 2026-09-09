@@ -22,7 +22,7 @@ function ForgotPassword() {
 
         try {
             const response = await fetch(
-            "http://localhost:5000/api/users/forgot-password",
+            "https://finora-backend-ogsi.onrender.com/api/users/forgot-password",
             {
                 method: "POST",
                 headers: {

@@ -44,7 +44,7 @@ function Budgets({ budgets, setBudgets, expenses, theme, setToken, setUser }) {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/budgets/${category}`,
+        `https://finora-backend-ogsi.onrender.com/api/budgets/${category}`,
         {
           method: "PUT",
           headers: {

@@ -33,7 +33,7 @@ function ResetPassword() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/users/reset-password/${token}`,
+        `https://finora-backend-ogsi.onrender.com/api/users/reset-password/${token}`,
         {
           method: "PUT",
           headers: {

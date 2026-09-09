@@ -33,7 +33,7 @@ function Dashboard({expenses, handleAddExpense, income, setIncome, theme, setTok
 
     try{
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:5000/api/income",{
+      const response = await fetch("https://finora-backend-ogsi.onrender.com/api/income",{
         method : "PUT",
         headers : {
           "Content-Type" : "application/json",
@@ -81,7 +81,7 @@ function Dashboard({expenses, handleAddExpense, income, setIncome, theme, setTok
 
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:5000/api/income", {
+      const response = await fetch("https://finora-backend-ogsi.onrender.com/api/income", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

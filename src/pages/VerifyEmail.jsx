@@ -12,7 +12,7 @@ function VerifyEmail() {
     async function verifyEmail() {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/users/verify-email/${token}`
+          `https://finora-backend-ogsi.onrender.com/api/users/verify-email/${token}`
         );
         const data = await response.json();
 

@@ -25,7 +25,7 @@ function App() {
       if (!token) return;
 
       try {
-        const response = await fetch("http://localhost:5000/api/expenses", {
+        const response = await fetch("https://finora-backend-ogsi.onrender.com/api/expenses", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -59,7 +59,7 @@ function App() {
       if (!token) return;
 
       try {
-        const response = await fetch("http://localhost:5000/api/income", {
+        const response = await fetch("https://finora-backend-ogsi.onrender.com/api/income", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -89,7 +89,7 @@ function App() {
       if (!token) return;
 
       try {
-        const response = await fetch("http://localhost:5000/api/users/profile", {
+        const response = await fetch("https://finora-backend-ogsi.onrender.com/api/users/profile", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -119,7 +119,7 @@ function App() {
     async function handleAddExpense(newExpense) {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:5000/api/expenses", {
+      const response = await fetch("https://finora-backend-ogsi.onrender.com/api/expenses", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -167,7 +167,7 @@ function App() {
       if(!token) return;
 
       try{
-        const response = await fetch("http://localhost:5000/api/budgets",{
+        const response = await fetch("https://finora-backend-ogsi.onrender.com/api/budgets",{
           headers:{
             Authorization: `Bearer ${token}`,
           },

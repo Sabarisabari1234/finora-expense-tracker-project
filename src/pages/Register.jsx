@@ -38,7 +38,7 @@ function Register() {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/users/register",
+        "https://finora-backend-ogsi.onrender.com/api/users/register",
         {
           method: "POST",
           headers: {

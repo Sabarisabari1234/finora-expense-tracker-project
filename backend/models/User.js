@@ -22,6 +22,11 @@ const userSchema = new mongoose.Schema({
   default: false,
   },
 
+  isDemo: {
+    type: Boolean,
+    default: false,
+  },
+
   verificationToken: {
     type: String,
   },

@@ -253,6 +253,12 @@ router.put("/change-password", authMiddleware, async (req, res) => {
 
     const user = await User.findById(req.userId);
 
+    if (user.isDemo) {
+      return res.status(403).json({
+        message: "Password cannot be changed for the demo account",
+      });
+    }
+
     const isPasswordCorrect = await bcrypt.compare(
       currentPassword,
       user.password

@@ -13,7 +13,7 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 
-function Dashboard({expenses, handleAddExpense, income, setIncome, theme, setToken, user, setUser}) {
+function Dashboard({expenses, handleAddExpense, income, setIncome, theme, setToken, user, setUser, loading}) {
 
   const [incomeInput, setIncomeInput] = useState("");
   const [incomeOpen, setIncomeOpen] = useState(false);
@@ -148,21 +148,21 @@ function Dashboard({expenses, handleAddExpense, income, setIncome, theme, setTok
         <SummaryCard
           theme={theme}
           title="Balance"
-          amount={`₹${summary.balance.toLocaleString("en-IN")}`}
+          amount={loading ? "Loading..." : `₹${summary.balance.toLocaleString("en-IN")}`}
           description="Available balance"
         />
 
         <SummaryCard
           theme={theme}
           title="Income"
-          amount={`₹${summary.income.toLocaleString("en-IN")}`}
+          amount={loading ? "Loading..." : `₹${summary.income.toLocaleString("en-IN")}`}
           description="This month"
         />
 
         <SummaryCard
           theme={theme}
           title="Expenses"
-          amount={`₹${summary.expenses.toLocaleString("en-IN")}`}
+          amount={loading ? "Loading..." : `₹${summary.expenses.toLocaleString("en-IN")}`}
           description={`${expenseCount} expenses`}
         />
       </div>

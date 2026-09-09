@@ -17,6 +17,8 @@ import { Route, Routes, BrowserRouter, useLocation, Navigate } from 'react-route
 function App() {
   const [expenses, setExpenses] = useState([]);
   const [income, setIncome] = useState(0);
+  const [expensesLoading, setExpensesLoading] = useState(true);
+  const [incomeLoading, setIncomeLoading] = useState(true);
   const [token, setToken] = useState(() => localStorage.getItem("token"));
   const [user, setUser] = useState(null);
 
@@ -45,11 +47,14 @@ function App() {
             id: expense._id,
           }))
         );
+
+        setExpensesLoading(false);
       } catch (error) {
         console.error("Failed to fetch expenses:", error);
+        setExpensesLoading(false);
       }
     };
-
+    setExpensesLoading(true);
     fetchExpenses();
   }, [token]);
 
@@ -76,10 +81,14 @@ function App() {
         if (data) {
           setIncome(data.amount);
         }
+
+        setIncomeLoading(false);
       } catch (error) {
         console.error("Failed to fetch income:", error);
+        setIncomeLoading(false);
       }
     };
+    setIncomeLoading(true);
     fetchIncome();
   }, [token]);
 
@@ -227,7 +236,7 @@ function App() {
               <Header setToken={setToken} user={user} setUser={setUser} theme={theme} />
               <main className="flex-1 p-6">
                 <Routes>
-                  <Route path="/" element={<Dashboard expenses={expenses} handleAddExpense={handleAddExpense} setExpenses={setExpenses} income={income} setIncome={setIncome} theme={theme}  setToken={setToken} user={user} setUser={setUser} />} />
+                  <Route path="/" element={<Dashboard expenses={expenses} handleAddExpense={handleAddExpense} setExpenses={setExpenses} income={income} setIncome={setIncome} theme={theme}  setToken={setToken} user={user} setUser={setUser} loading={expensesLoading || incomeLoading} />} />
                   <Route path="/expenses" element={<Expenses expenses={expenses} setExpenses={setExpenses} handleAddExpense={handleAddExpense} theme={theme} setToken={setToken} setUser={setUser} />} />
                   <Route path="/analytics" element={<Analytics expenses={expenses} theme={theme} />} />
                   <Route path="/budgets" element={<Budgets budgets={budgets} expenses={expenses} setBudgets={setBudgets} theme={theme} setToken={setToken} setUser={setUser}/>} />

@@ -46,7 +46,7 @@ router.post("/register", async (req, res) => {
         verificationToken,
         verificationTokenExpires: Date.now() + 24 * 60 * 60 * 1000,
     });
-    const verificationLink = `http://localhost:5173/verify-email/${verificationToken}`;
+    const verificationLink = `https://finora-expense-tracker-project.vercel.app/verify-email/${verificationToken}`;
     await resend.emails.send({
       from: "onboarding@resend.dev",
       to: email,
@@ -302,7 +302,7 @@ router.post("/forgot-password", async (req, res) => {
 
     await user.save();
 
-    const resetLink = `http://localhost:5173/reset-password/${resetToken}`;
+    const resetLink = `https://finora-expense-tracker-project.vercel.app/reset-password/${resetToken}`;
 
     await resend.emails.send({
       from: "onboarding@resend.dev",

@@ -13,7 +13,7 @@ Due to email verification requirements in the deployed environment, a pre-verifi
 Use the following credentials to explore the application without creating an account:
 
 **Email:** demo@finora.com  
-**Password:** Demo@12345
+**Password:** Demo@1234
 
 ## GitHub
 

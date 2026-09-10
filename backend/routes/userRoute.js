@@ -252,6 +252,7 @@ router.put("/change-password", authMiddleware, async (req, res) => {
     }
 
     const user = await User.findById(req.userId);
+    console.log("DEMO CHECK:", user.email, user.isDemo);
 
     if (!user) {
       return res.status(404).json({
